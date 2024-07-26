@@ -13,6 +13,10 @@ if vim.g.neovide then
   vim.g.neovide_padding_right = 0
   vim.g.neovide_padding_left = 0
 
+  vim.opt.tabstop = 2
+  vim.opt.shiftwidth = 2
+  vim.opt.expandtab = true
+
   -- macOS keybinds
   vim.keymap.set("n", "<D-s>", ":w<CR>") -- Save
   vim.keymap.set("v", "<D-c>", '"+y') -- Copy
