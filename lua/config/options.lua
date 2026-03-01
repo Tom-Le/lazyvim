@@ -27,4 +27,5 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.wrap = true
 
+vim.g.autoformat = false
 vim.g.snacks_animate = false
