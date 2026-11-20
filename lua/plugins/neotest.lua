@@ -1,4 +1,5 @@
--- Run bats tests (and any other runner vim-test supports) through neotest.
+-- Run bats tests (and any other runner vim-test supports) and OpenTofu tests
+-- through neotest.
 return {
   {
     "nvim-neotest/neotest",
@@ -19,6 +20,9 @@ return {
       adapter.discover_positions = adapter._discover_positions
       adapter.build_spec = adapter._build_spec
       table.insert(opts.adapters, adapter)
+
+      -- OpenTofu tests (*.tftest.hcl); vim-test has no runner for them.
+      table.insert(opts.adapters, require("neotest-tofu"))
     end,
   },
 }
